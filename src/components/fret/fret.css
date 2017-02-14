@@ -1,0 +1,14 @@
+.fret {
+  width: 8.333%;
+  text-align: center;
+  color: #ccc;
+}
+
+.fret--active {
+  color: #444;
+}
+
+.fret--root {
+  background: #444;
+  color: white;
+}
