@@ -8,11 +8,12 @@ export default class String extends Component {
     let TOTAL_FRETS = 13;
 
     return (
-      <div className='string'>
+      <div className='string u-flex-none'>
         {
           [...Array(TOTAL_FRETS)].map((_, index) => {
             return (
               <Fret key={ index }
+              string={ this.props.number }
               toggle={ this.props.toggle }
               isActiveFret={ this.props.isActiveFret(this.props.number, index) }
               interval={ this.props.getInterval(this.props.number, index) }
