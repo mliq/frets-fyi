@@ -1,0 +1,15 @@
+.notes-intervals-toggle__label {
+  color: #ccc;
+}
+
+.notes-intervals-toggle__label:first-child {
+  margin-right: 10px;
+}
+
+.notes-intervals-toggle__label:hover {
+  cursor: pointer;
+}
+
+.notes-intervals-toggle__label.is-active {
+  color: #333;
+}

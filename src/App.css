@@ -49,3 +49,11 @@ div {
 .u-align-items-center {
   align-items: center;
 }
+
+.nav {
+  padding: 10px;
+}
+
+.u-display-none {
+  display: none;
+}
