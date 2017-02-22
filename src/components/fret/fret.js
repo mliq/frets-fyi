@@ -16,6 +16,7 @@ export default class String extends Component {
 
         <div className={classNames('fret__divider', {
           'fret__divider--bottom-string': this.props.string === 'E1',
+          'fret__divider--top-string': this.props.string === 'E2',
         })}></div>
       </div>
     );

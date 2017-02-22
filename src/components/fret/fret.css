@@ -115,11 +115,15 @@
   }
 }
 
-.fret__divider--bottom-string {
+.fret__divider--top-string {
   display: none;
 }
 
 @media (min-width: 500px) {
+  .fret__divider--top-string {
+    display: flex;
+  }
+
   .fret__divider--bottom-string {
     display: flex;
     top: 0;
