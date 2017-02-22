@@ -8,6 +8,19 @@
   flex-basis: 0;
 }
 
+.fret__dot {
+  width: 7px;
+  height: 7px;
+  background: #333;
+  border-radius: 50%;
+  margin: 1px;
+}
+
+.fret__dot--open {
+  background: white;
+  border: 1px solid #333;
+}
+
 @media (min-width: 500px) {
   .fret {
     padding: 5px 0;
@@ -18,10 +31,18 @@
   border-bottom: 2px solid lightgray;
 }
 
+.fret--marker:first-child {
+  border-color: transparent;
+}
+
 @media (min-width: 500px) {
   .fret:first-child {
     border-bottom: 0;
     border-right: 2px solid lightgray;
+  }
+
+  .fret--marker:first-child {
+    border-color: transparent;
   }
 }
 
@@ -35,6 +56,10 @@
   z-index: 0;
 }
 
+.fret--marker:before {
+  background: transparent;
+}
+
 @media (min-width: 500px) {
   .fret:before {
     top: 50%;
@@ -46,9 +71,9 @@
 }
 
 .fret__label {
-  width: 24px;
-  height: 24px;
-  line-height: 24px;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
   border: 1px solid lightgray;
   border-radius: 50%;
   font-size: 12px;

@@ -113,6 +113,43 @@ export default class App extends Component {
                   getInterval={ this.getInterval } />
                 );
               }) }
+
+              <div className='fretboard__markers'>
+                <div className='string'>
+                  <div className='fret fret--marker u-flex-direction-row'>
+                    <div className='u-flex-none fret__dot fret__dot--open'></div>
+                  </div>
+
+                  <div className='fret fret--marker u-flex-direction-row'></div>
+                  <div className='fret fret--marker u-flex-direction-row'></div>
+                  <div className='fret fret--marker u-flex-direction-row'></div>
+                  <div className='fret fret--marker u-flex-direction-row'></div>
+
+                  <div className='fret fret--marker u-flex-direction-row'>
+                    <div className='u-flex-none fret__dot'></div>
+                  </div>
+
+                  <div className='fret fret--marker u-flex-direction-row'></div>
+
+                  <div className='fret fret--marker u-flex-direction-row'>
+                    <div className='u-flex-none fret__dot'></div>
+                  </div>
+
+                  <div className='fret fret--marker u-flex-direction-row'></div>
+
+                  <div className='fret fret--marker u-flex-direction-row'>
+                    <div className='u-flex-none fret__dot'></div>
+                  </div>
+
+                  <div className='fret fret--marker u-flex-direction-row'></div>
+                  <div className='fret fret--marker u-flex-direction-row'></div>
+
+                  <div className='fret fret--marker u-flex-direction-row'>
+                    <div className='u-flex-none fret__dot'></div>
+                    <div className='u-flex-none fret__dot'></div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
