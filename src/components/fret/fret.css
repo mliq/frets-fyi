@@ -135,3 +135,7 @@
 .fret:first-child .fret__divider {
   display: none;
 }
+
+.fret:last-child .fret__divider {
+  display: none;
+}
