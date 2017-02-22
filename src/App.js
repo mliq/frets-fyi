@@ -89,29 +89,31 @@ export default class App extends Component {
   render() {
     return (
       <div className='App'>
-        <div className='nav u-flex-none u-flex-direction-row'>
-          <div className='u-flex-direction-row'>
-            <NoteSelect value={ this.state.note } onChange={ this.handleNoteChange } />
-            <ScaleSelect value={ this.state.scale } onChange={ this.handleScaleChange } />
+        <div className='App__container'>
+          <div className='nav u-flex-none u-flex-direction-row'>
+            <div className='u-flex-direction-row'>
+              <NoteSelect value={ this.state.note } onChange={ this.handleNoteChange } />
+              <ScaleSelect value={ this.state.scale } onChange={ this.handleScaleChange } />
+            </div>
+
+            <div className='u-flex-none'>
+              <NotesIntervalsToggle value={ this.state.toggle } onChange={ this.handleToggle }/>
+            </div>
           </div>
 
-          <div className='u-flex-none'>
-            <NotesIntervalsToggle value={ this.state.toggle } onChange={ this.handleToggle }/>
-          </div>
-        </div>
-
-        <div className='fretboard'>
-          <div className='fretboard__strings'>
-            { _.reverse(this.getStrings()).map((string, index) => {
-              return (
-                <String key={ index }
-                number={ string }
-                toggle={ this.state.toggle }
-                isActiveFret={ this.isActiveFret }
-                getFretNote={ this.getFretNote }
-                getInterval={ this.getInterval } />
-              );
-            }) }
+          <div className='fretboard'>
+            <div className='fretboard__strings'>
+              { _.reverse(this.getStrings()).map((string, index) => {
+                return (
+                  <String key={ index }
+                  number={ string }
+                  toggle={ this.state.toggle }
+                  isActiveFret={ this.isActiveFret }
+                  getFretNote={ this.getFretNote }
+                  getInterval={ this.getInterval } />
+                );
+              }) }
+            </div>
           </div>
         </div>
       </div>

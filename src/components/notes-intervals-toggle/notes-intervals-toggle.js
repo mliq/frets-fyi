@@ -6,7 +6,7 @@ export default class NotesIntervalsToggle extends Component {
   render() {
     return (
       <div className='u-flex-direction-row'>
-        <label className={ classNames('notes-intervals-toggle__label', {
+        <label className={ classNames('notes-intervals-toggle__label u-margin-R', {
           'is-active': this.props.value === 'notes',
         }) }>
           <input type="radio"

@@ -1,0 +1,30 @@
+.select-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.select-container__label {
+  pointer-events: none;
+}
+
+.select-container__label:hover {
+  cursor: pointer;
+}
+
+.select-container__label:after {
+  content: '\25be';
+  pointer-events: none;
+  color: #333;
+  z-index: 2;
+  margin-left: 4px;
+}
+
+.select-container__select {
+  /*margin: 0;
+  padding: 10px 20px 10px 10px;*/
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 16px;
+}
