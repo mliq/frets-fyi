@@ -16,7 +16,6 @@ export default class NoteSelect extends Component {
   render() {
     return (
       <div className='select-container u-flex-none u-margin-R'>
-
         <div className='select-container__label u-flex-direction-row'>
           { this.renderNoteLabel(this.props.value) }
         </div>
@@ -25,7 +24,7 @@ export default class NoteSelect extends Component {
         value={ this.props.value }
         onChange={ this.props.onChange }>
           { NOTES.map((note, index) => {
-            return <option key={index} value={ note.name } label={ note.label } />
+            return <option key={index} value={ note.name }>{ note.label }</option>
           }) }
         </select>
       </div>

@@ -28,6 +28,7 @@ div {
   align-items: center;
   min-height: 500px;
   position: relative;
+  -webkit-overflow-scrolling: touch;
 }
 
 .fretboard__strings {
