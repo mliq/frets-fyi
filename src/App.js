@@ -122,7 +122,11 @@ export default class App extends Component {
 
                   <div className='fret fret--marker u-flex-direction-row'></div>
                   <div className='fret fret--marker u-flex-direction-row'></div>
-                  <div className='fret fret--marker u-flex-direction-row'></div>
+
+                  <div className='fret fret--marker u-flex-direction-row'>
+                    <div className='u-flex-none fret__dot'></div>
+                  </div>
+
                   <div className='fret fret--marker u-flex-direction-row'></div>
 
                   <div className='fret fret--marker u-flex-direction-row'>
