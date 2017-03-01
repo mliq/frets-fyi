@@ -88,6 +88,19 @@ export const SCALES = [
     ],
   },
   {
+    name: 'ionian',
+    label: 'Ionian',
+    intervals: [
+      INTERVAL_NAMES.ROOT,
+      INTERVAL_NAMES.MAJOR_SECOND,
+      INTERVAL_NAMES.MAJOR_THIRD,
+      INTERVAL_NAMES.PERFECT_FOURTH,
+      INTERVAL_NAMES.PERFECT_FIFTH,
+      INTERVAL_NAMES.MAJOR_SIXTH,
+      INTERVAL_NAMES.MAJOR_SEVENTH,
+    ],
+  },
+  {
     name: 'dorian',
     label: 'Dorian',
     intervals: [
@@ -136,6 +149,19 @@ export const SCALES = [
       INTERVAL_NAMES.PERFECT_FOURTH,
       INTERVAL_NAMES.PERFECT_FIFTH,
       INTERVAL_NAMES.MAJOR_SIXTH,
+      INTERVAL_NAMES.MINOR_SEVENTH,
+    ],
+  },
+  {
+    name: 'aeolian',
+    label: 'Aeolian',
+    intervals: [
+      INTERVAL_NAMES.ROOT,
+      INTERVAL_NAMES.MAJOR_SECOND,
+      INTERVAL_NAMES.MINOR_THIRD,
+      INTERVAL_NAMES.PERFECT_FOURTH,
+      INTERVAL_NAMES.PERFECT_FIFTH,
+      INTERVAL_NAMES.MINOR_SIXTH,
       INTERVAL_NAMES.MINOR_SEVENTH,
     ],
   },
