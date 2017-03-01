@@ -7,6 +7,7 @@ export const INTERVAL_NAMES = {
   MINOR_THIRD: 'm3',
   MAJOR_THIRD: 'M3',
   PERFECT_FOURTH: 'P4',
+  AUGMENTED_FOURTH: 'A4',
   DIMINISHED_FIFTH: 'd5',
   PERFECT_FIFTH: 'P5',
   MINOR_SIXTH: 'm6',
@@ -116,6 +117,23 @@ export const INTERVALS = [
       { key: NOTE_NAMES.F_SHARP, note: NOTE_NAMES.B },
       { key: NOTE_NAMES.G, note: NOTE_NAMES.C },
       { key: NOTE_NAMES.G_SHARP, note: NOTE_NAMES.C_SHARP },
+    ],
+  },
+  {
+    name: INTERVAL_NAMES.AUGMENTED_FOURTH, // Same as DIMINISHED_FIFTH, refactor?
+    notes: [
+      { key: NOTE_NAMES.A, note: NOTE_NAMES.D_SHARP },
+      { key: NOTE_NAMES.A_SHARP, note: NOTE_NAMES.E },
+      { key: NOTE_NAMES.B, note: NOTE_NAMES.F },
+      { key: NOTE_NAMES.C, note: NOTE_NAMES.F_SHARP },
+      { key: NOTE_NAMES.C_SHARP, note: NOTE_NAMES.G },
+      { key: NOTE_NAMES.D, note: NOTE_NAMES.G_SHARP },
+      { key: NOTE_NAMES.D_SHARP, note: NOTE_NAMES.A },
+      { key: NOTE_NAMES.E, note: NOTE_NAMES.A_SHARP },
+      { key: NOTE_NAMES.F, note: NOTE_NAMES.B },
+      { key: NOTE_NAMES.F_SHARP, note: NOTE_NAMES.C },
+      { key: NOTE_NAMES.G, note: NOTE_NAMES.C_SHARP },
+      { key: NOTE_NAMES.G_SHARP, note: NOTE_NAMES.D },
     ],
   },
   {

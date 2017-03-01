@@ -17,7 +17,8 @@ export default class App extends Component {
     this.handleScaleChange = this.handleScaleChange.bind(this);
     this.handleToggle = this.handleToggle.bind(this);
     this.getInterval = this.getInterval.bind(this);
-    this.getScale = this.getScale.bind(this);
+    this.getScaleNotes = this.getScaleNotes.bind(this);
+    this.getScaleIntervals = this.getScaleIntervals.bind(this);
     this.getIntervalNote = this.getIntervalNote.bind(this);
     this.isActiveFret = this.isActiveFret.bind(this);
     this.handleHelpIconClick = this.handleHelpIconClick.bind(this);
@@ -70,13 +71,22 @@ export default class App extends Component {
     return _.get(note, 'label');
   }
 
+  getScaleIntervals() {
+    return _.get(_.find(SCALES, { name: this.state.scale }), 'intervals');
+  }
+
   getNoteLabel(note) {
     return _.get(_.find(NOTES, { name: note }), 'label');
   }
 
   getInterval(string, position) {
     let interval =  _.find(INTERVALS, (interval) => {
-      return _.find(interval.notes, {
+      // Extra check that the interval name is in the current
+      // scale — otherwise d5 & A4 can't be told apart. Would be good
+      // to reconsider now that original assumption that interval can be derived
+      // from key & note alone is not correct
+      return _.includes(this.getScaleIntervals(), interval.name)
+      && _.find(interval.notes, {
         key: this.getNoteLabel(this.state.note),
         note: this.getFretNote(string, position),
       });
@@ -90,7 +100,7 @@ export default class App extends Component {
     return _.get(_.find(foundInterval.notes, { key }), 'note');
   }
 
-  getScale() {
+  getScaleNotes() {
     let intervals = _.get(_.find(SCALES, { name: this.state.scale }), 'intervals');
 
     return _.map(intervals, (interval) => {
@@ -99,7 +109,7 @@ export default class App extends Component {
   }
 
   isActiveFret(string, position) {
-    return _.some(this.getScale(), (note) => {
+    return _.some(this.getScaleNotes(), (note) => {
       return note === this.getFretNote(string, position);
     })
   }
@@ -125,7 +135,7 @@ export default class App extends Component {
               <p className='u-margin-B'>
                 <a className='u-inline-code u-link-clean u-text-xxs'
                 href='https://github.com/jamesshedden/frets-fyi/releases'
-                target='_blank'>v1.1.1</a>
+                target='_blank'>v1.2.1</a>
               </p>
 
               <p>
