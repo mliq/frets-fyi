@@ -124,8 +124,8 @@ export default class App extends Component {
 
               <p className='u-margin-B'>
                 <a className='u-inline-code u-link-clean u-text-xxs'
-                href='https://github.com/jamesshedden/frets-fyi/releases/tag/v1.0.0'
-                target='_blank'>v1.0.0</a>
+                href='https://github.com/jamesshedden/frets-fyi/releases'
+                target='_blank'>v1.1.1</a>
               </p>
 
               <p>
