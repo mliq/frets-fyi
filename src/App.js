@@ -20,11 +20,15 @@ export default class App extends Component {
     this.getScale = this.getScale.bind(this);
     this.getIntervalNote = this.getIntervalNote.bind(this);
     this.isActiveFret = this.isActiveFret.bind(this);
+    this.handleHelpIconClick = this.handleHelpIconClick.bind(this);
+    this.handleModalClick = this.handleModalClick.bind(this);
+    this.handleModalCloseClick = this.handleModalCloseClick.bind(this);
 
     this.state = {
       note: 'c',
       scale: 'major', // be nice to remember all these settings from local storage
       toggle: 'notes',
+      isModalVisible: false,
     };
   }
 
@@ -38,6 +42,20 @@ export default class App extends Component {
 
   handleToggle(event) {
     this.setState({ toggle: event.target.value });
+  }
+
+  handleHelpIconClick(event) {
+    this.setState({ isModalVisible: true });
+  }
+
+  handleModalClick(event) {
+    if (event.target.id === 'modal-container') {
+      this.setState({ isModalVisible: false });
+    }
+  }
+
+  handleModalCloseClick() {
+    this.setState({ isModalVisible: false });
   }
 
   getStrings() {
@@ -89,6 +107,41 @@ export default class App extends Component {
   render() {
     return (
       <div className='App'>
+
+        {
+          this.state.isModalVisible ?
+          <div id='modal-container'
+          className='App__modal-container' onClick={ this.handleModalClick }>
+            <div className='App__modal-content'>
+              <img className='App__modal-close-button'
+              alt='Close button'
+              onClick={ this.handleModalCloseClick }
+              src='close-icon.svg'/>
+
+              <p className='u-margin-B'>
+                <strong>frets.fyi</strong>
+              </p>
+
+              <p className='u-margin-B'>
+                <a className='u-inline-code u-link-clean u-text-xxs'
+                href='https://github.com/jamesshedden/frets-fyi/releases/tag/v1.0.0'
+                target='_blank'>v1.0.0</a>
+              </p>
+
+              <p>
+                Made by&nbsp;
+
+                <a className='u-link'
+                href='https://twitter.com/jamesshedden'
+                target='_blank'>
+                  @jamesshedden
+                </a>
+              </p>
+            </div>
+          </div> :
+          null
+        }
+
         <div className='App__container'>
           <div className='nav u-flex-none u-flex-direction-row'>
             <div className='u-flex-direction-row'>
@@ -157,6 +210,8 @@ export default class App extends Component {
             </div>
           </div>
         </div>
+
+        <div className='App__help-icon' onClick={ this.handleHelpIconClick }>?</div>
       </div>
     );
   }
