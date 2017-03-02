@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import './fret.css';
 import { INTERVAL_NAMES } from '../../../src/constants/intervals';
 
-export default class String extends Component {
+export default class Fret extends Component {
   render() {
     return (
       <div className='fret'>
