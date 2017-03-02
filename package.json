@@ -7,9 +7,13 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
+    "enzyme": "^2.7.1",
+    "enzyme-to-json": "^1.5.0",
     "lodash": "^4.17.4",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-addons-test-utils": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-test-renderer": "^15.4.2"
   },
   "scripts": {
     "start": "react-scripts start",

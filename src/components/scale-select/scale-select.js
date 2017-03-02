@@ -22,6 +22,7 @@ export default class ScaleSelect extends Component {
 
         <select className='select-container__select'
         value={ this.props.value }
+        id='scale-select'
         onChange={ this.props.onChange }>
           { SCALES.map((scale, index) => {
             return <option key={index} value={ scale.name }>{ scale.label }</option>

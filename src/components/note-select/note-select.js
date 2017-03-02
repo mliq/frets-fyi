@@ -21,6 +21,7 @@ export default class NoteSelect extends Component {
         </div>
 
         <select className='select-container__select'
+        id='note-select'
         value={ this.props.value }
         onChange={ this.props.onChange }>
           { NOTES.map((note, index) => {
